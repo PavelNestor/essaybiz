@@ -2,7 +2,7 @@
   box-sizing: border-box
 
 html
-  color: $color
+  color: $color_main
   font-size: 8px
   font-family: Montserrat
 
@@ -31,7 +31,7 @@ section
 a
   border: none
   outline: none
-  // color: $main-color
+  color: $color_main
   text-decoration: none
 
 p
@@ -68,19 +68,41 @@ ul
 
 h1, h2, h3, h4, h5, h6
   &:first-child
+    font-family: $font-family_accent
     margin-top: 0
+    color: $color_primary
 
 h1
+  font-size: 4rem
+  font-weight: 900
+  line-height: .9em
+  text-transform: uppercase
+
 h2
+  font-size: 3.4rem
+  font-weight: 900
+  line-height: .9em
+  text-transform: uppercase
+
 h3
+  font-size: 2rem
+  font-weight: 900
+  line-height: .9em
+  text-transform: uppercase
+
 h4
+  font-family: $font-family
+  font-weight: bold
+  font-size: 2.2rem
+  line-height: 1.3em
+
 h5
 h6
 
 hr
   border: 0
   display: block
-  border-top: 1px solid $base-font-color
+  border-top: 1px solid $color_main
   height: 1px
   margin-top: 1rem
   margin-bottom: 1rem
@@ -95,13 +117,13 @@ button, input, select, textarea, a
 
   &:focus,
   &:active
-    outline-color: $main-color
+    outline-color: $color_main
 
 //	SELECT
 select
   appearance: none
-  border: 1px solid $base-font-color
-  outline-color: $main-color
+  border: 1px solid $color_main
+  outline-color: $color_main
 
   &:-moz-focusring
     color: transparent
@@ -111,9 +133,9 @@ select
 // INPUTS & TEXTAREA
 input,
 textarea
-  outline-color: $main-color
+  outline-color: $color_main
   font: $font
-  color: $base-font-color
+  color: $color_main
   font-size: 1rem
 
   &::placeholder
@@ -240,3 +262,5 @@ input[type='number']
       margin-left: 0.5rem
       margin-bottom: 1.1rem
 
+.white
+  color: #fff

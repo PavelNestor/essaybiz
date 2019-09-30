@@ -1,0 +1,13 @@
+.main
+  display: flex
+
+  &__col
+    min-height: 100vh
+
+    &:nth-child(1)
+      background: rgba(102, 147, 141, .9), cover no-repeat url('/img/block-main/block-main.jpg')
+      flex-basis: 66%
+
+    &:nth-child(2)
+      background: $color_accent
+      flex-basis: 33%
