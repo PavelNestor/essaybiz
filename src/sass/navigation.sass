@@ -1,4 +1,78 @@
-//----------------------------------
-// Default navbar
-//----------------------------------
 .navbar
+  position: absolute
+  display: flex
+  padding: 0
+  align-items: center
+  width: 100%
+
+  @media #{$media-md-up}
+    padding: 4.5rem 0
+
+  .menu
+    margin: 0
+    margin-bottom: 1rem
+
+    &__img-search
+      margin-right: 1rem
+
+    &__link
+      color: $color_primary
+      text-transform: uppercase
+      font-size: 1.2rem
+      font-weight: bold
+      padding: 0
+
+      &_white
+        color: #fff
+
+    &__item
+      margin: 0
+      padding: 0
+      list-style: none
+      display: inline-block
+      margin-left: 3rem
+
+      &_right
+        margin-left: 0
+        margin-right: 2.7rem
+
+        &:nth-last-child
+          margin-right: 0
+
+  &__col
+    display: none
+
+    @media #{$media-md-up}
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+    &:nth-child(1)
+      flex-basis: 67%
+      flex-direction: row
+      justify-content: space-between
+      padding: 0 5rem 0 10vw
+      align-items: center
+
+      @media #{$media-md-up}
+        padding: 0 5rem 0 7vw
+      @media #{$media-lg-up}
+        padding: 0 5rem 0 10vw
+
+    &:nth-child(2)
+      flex-basis: 33%
+      padding: 0 8vw 0 4.5vw
+
+      @media #{$media-md-up}
+        padding: 0 5vw 0 4.5vw
+      @media #{$media-lg-up}
+        padding: 0 8vw 0 4.5vw
+
+  &__mobile
+    display: flex
+    justify-content: space-between
+    padding: 2rem 2rem 2rem 0
+    width: 100%
+
+    @media #{$media-md-up}
+      display: none

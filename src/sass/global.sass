@@ -67,22 +67,29 @@ ul
       display: inline-block
 
 h1, h2, h3, h4, h5, h6
+  font-family: $font-family_accent
+  color: $color_primary
+
   &:first-child
-    font-family: $font-family_accent
     margin-top: 0
-    color: $color_primary
 
 h1
-  font-size: 4rem
+  font-size: 3.6rem
   font-weight: 900
   line-height: .9em
   text-transform: uppercase
 
+  @media #{$media-md-up}
+    font-size: 4rem
+
 h2
-  font-size: 3.4rem
+  font-size: 3rem
   font-weight: 900
   line-height: .9em
   text-transform: uppercase
+
+  @media #{$media-md-up}
+    font-size: 3.4rem
 
 h3
   font-size: 2rem
@@ -97,6 +104,11 @@ h4
   line-height: 1.3em
 
 h5
+  font-family: $font-family
+  font-weight: 600
+  font-size: 2rem
+  line-height: 1em
+
 h6
 
 hr
@@ -113,11 +125,21 @@ label
 
 button, input, select, textarea, a
   font: $font
-  font-size: 1rem
+  font-size: 1.4rem
+  border: none
+  border-radius: 2px
+  height: 4.8rem
+  width: 100%
+  padding: .6rem
+  outline-color: none
+
+  @media #{$media-md-up}
+    height: 4rem
 
   &:focus,
   &:active
-    outline-color: $color_main
+    outline-color: none
+    outline: none
 
 //	SELECT
 select
@@ -133,10 +155,10 @@ select
 // INPUTS & TEXTAREA
 input,
 textarea
-  outline-color: $color_main
+  // outline-color: #fff
   font: $font
   color: $color_main
-  font-size: 1rem
+  font-size: 1.6rem
 
   &::placeholder
     font: $font
@@ -250,17 +272,68 @@ input[type='number']
   margin: 0
 
   &__item
-    background: url(/img/icons/list-img.svg) no-repeat left 1px
-    font-size: 1.4rem
-    line-height: 1.4em
-    margin-bottom: 1.2rem
-    margin-left: -0.1rem
-    padding-left: 3.2rem
+    background: url(/img/icons/list-img.svg) no-repeat left 3px
+    font-size: 1.6rem
+    line-height: 1.2em
+    margin-bottom: 1.1rem
+    margin-left: 0
+    padding-left: 2.8rem
     color: $color_primary
 
     @media #{$media-sm-plus-up}
+      background: url(/img/icons/list-img.svg) no-repeat left 1px
       margin-left: 0.5rem
-      margin-bottom: 1.1rem
+      margin-bottom: .8rem
+      padding-left: 3.2rem
 
 .white
   color: #fff
+
+.search
+  &__container
+
+  &__form
+    display: flex
+
+  &__input
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+  &__button
+    padding: .6rem 1rem
+    background: #fff
+    font-size: 1.6rem
+    border: none
+    cursor: pointer
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    width: 4rem
+
+    &:hover
+
+.main-btn
+  // background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)
+  background-image: linear-gradient(to right, #66938D 0%, 51%, #EB5757 100%)
+  // background-position: left center
+  transition: 1s
+  border-radius: 2px
+  color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: bold
+  font-size: 1.6rem
+  line-height: 1.2em
+  // background-position: 0 0
+  width: 100%
+  padding: 1rem 5rem
+  
+  &:hover
+    // background-position: right center
+    background-image: linear-gradient(to left, #66938D 0%, #EB5757 100%)
+    transition: 1s
+    animation: fadeIn 0.3s
+    animation-fill-mode: both
+
+  @media #{$media-md-up}
+    width: fit-content
