@@ -327,7 +327,7 @@ input[type='number']
   // background-position: 0 0
   width: 100%
   padding: 1rem 5rem
-  
+
   &:hover
     // background-position: right center
     background-image: linear-gradient(to left, #66938D 0%, #EB5757 100%)
@@ -337,3 +337,57 @@ input[type='number']
 
   @media #{$media-md-up}
     width: fit-content
+
+.essay
+  margin-bottom: 3rem
+  padding: 2.6rem 4rem 3rem
+  background: #fff
+
+  @media #{$media-sm-plus-up}
+    margin-bottom: 4rem
+
+  &__title
+    font-size: 2.2rem
+    line-height: 1.3em
+    color: $color_primary
+    padding: 0
+
+    @media #{$media-sm-plus-up}
+      font-size: 3rem
+      line-height: 1.15em
+
+  &__title_top
+    font-size: 2rem
+    line-height: 1.3em
+
+  &__details
+    display: flex
+
+  &__detail-block
+    display: flex
+    align-items: center
+    padding-top: 1rem
+
+  &__detail-img
+    height: 1rem
+
+  &__detail-slash
+    color: $color_accent
+
+  &__detail-text
+    margin: 0 1.6rem 0 0
+    font-size: 1.2rem
+    color: $color_primary
+    font-weight: normal
+
+    @media #{$media-sm-plus-up}
+      margin: 0 1rem 0 0
+
+  &__words-block
+  &__date-block
+  &__pages-block
+  &__text
+    margin-top: 1rem
+    font-size: 1.6rem
+    line-height: 1.3em
+    color: $color_main

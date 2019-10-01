@@ -9,3 +9,20 @@ mixin picturePng(path, alt='')
     source.cover(srcset=`${path}.webp` type="image/webp" alt= alt class!=attributes.class)
     source.cover(srcset=`${path}.png` type="image/jpeg" alt= alt class!=attributes.class)
     img.cover(srcset=`${path}.png` alt= alt class!=attributes.class)
+
+mixin essay(title, words, date, pages, text)
+  .essay
+    a.essay__title(class!=attributes.class)&attributes(attributes)= title
+    p.essay__text= text
+    +essayDetails(words, date, pages)
+
+mixin essayDetails(words, date, pages)
+  .essay__details
+    .essay__detail-block.essay__words-block
+      p.essay__detail-text= words
+    .essay__detail-block.essay__date-block
+      p.essay__detail-text.essay__detail-slash /
+      p.essay__detail-text= date
+    .essay__detail-block.essay__pages-block
+      p.essay__detail-text.essay__detail-slash /
+      p.essay__detail-text= pages
