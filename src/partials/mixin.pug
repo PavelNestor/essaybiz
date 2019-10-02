@@ -10,11 +10,11 @@ mixin picturePng(path, alt='')
     source.cover(srcset=`${path}.png` type="image/jpeg" alt= alt class!=attributes.class)
     img.cover(srcset=`${path}.png` alt= alt class!=attributes.class)
 
-mixin essay(title, words, date, pages, text)
+mixin essay(essay)
   .essay
-    a.essay__title(class!=attributes.class)&attributes(attributes)= title
-    p.essay__text= text
-    +essayDetails(words, date, pages)
+    a.essay__title(class!=attributes.class)&attributes(attributes)= essay.title
+    p.essay__text= essay.text
+    +essayDetails(essay.words, essay.date, essay.pages)
 
 mixin essayDetails(words, date, pages)
   .essay__details
