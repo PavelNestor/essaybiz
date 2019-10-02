@@ -1,5 +1,66 @@
-section.block-essay
+include mixin
 
+- 
+    var title = "Topics"
+
+    var topicsA = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+    ];
+
+    var topicsB = [
+      {
+        topics: 'B essay',
+      },
+    ];
+
+    var topicsC = [
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var tabLinks = [
+      '#',
+      'a',
+      'b',
+      'c',
+      'd',
+      'e',
+      'f',
+      'g',
+      'h',
+      'i',
+      'j',
+      'k',
+      'l',
+      'm',
+      'n',
+      'o',
+      'p',
+      'q',
+      'r',
+      's',
+      't',
+      'u',
+      'v',
+      'w',
+      'x',
+      'y',
+      'z'
+    ];
+
+section.block-essay
   .block-essay__col.block-essay__col_head
     .block-essay__need
       h2.need__title 
@@ -15,12 +76,22 @@ section.block-essay
   .block-essay__col.block-essay__col_middle
     h1.block-essay__title Essay
 
+    .tab__wrap
+      ul.tab
+        each tabLink in tabLinks
+          li.tab__links #{tabLink}
+
   .block-essay__col.block-essay__col_bottom
     .block-essay__subject
       h3.block-essay__subtitle
         | Free essays
         br
         | by subject:
+
+    .tab__content
+      each topic in topicsA
+        a(href='essay-page.html')
+            +topicsItem(topic)(class='tab__content-item')
 
     .block-essay__topic
       h3.block-essay__subtitle

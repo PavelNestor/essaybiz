@@ -26,3 +26,8 @@ mixin essayDetails(words, date, pages)
     .essay__detail-block.essay__pages-block
       p.essay__detail-text.essay__detail-slash /
       p.essay__detail-text= pages
+
+
+mixin topicsItem(options)
+  .hot__topics-item(class!=attributes.class)
+    .hot__topics-text= options.topics
