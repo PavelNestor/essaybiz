@@ -1,45 +1,72 @@
 .recent
   display: flex
+  flex-direction: column
+
+  @media #{$media-md-up}
+    flex-direction: row
 
   &__accent-block
-    width: 8.8rem
-    height: 16rem
+    width: 1.9rem
+    height: 8.7rem
     background: $color_accent
     position: absolute
-    left: 3rem
-    top: 0
+    left: 2rem
+    top: -1px
     pointer-events: none
     z-index: 0
+
+    @media #{$media-md-up}
+      left: 3rem
+      top: 0
+      width: 8.8rem
+      height: 16rem
 
     &:after
       content: ''
       height: 5rem
       width: 2px
-      bottom: -5rem
+      bottom: -4.3rem
       background: $color_accent
       right: 0
       position: absolute
 
+      @media #{$media-md-up}
+        bottom: -5rem
+
     &_last
-      left: 0
+      left: 2rem
+
+      @media #{$media-md-up}
+        left: 0
 
   &__title
-    margin: 12rem 0 5rem 14rem
+    margin: 5rem 0 4rem 5rem
     line-height: 1em
+
+    @media #{$media-md-up}
+      margin: 12rem 0 5rem 14rem
 
   &__col
     position: relative
-    flex-basis: 33%
+    padding: 0 2rem 0
 
-    &:nth-child(1)
-      padding: 0 0 3rem 3rem
+    &_one
       background: $color_light
 
-    &:nth-child(2)
+      @media #{$media-md-up}
+        flex-basis: 33%
+        padding: 0 0 3rem 3rem
+
+    &_two
       background: $color_bg
-      padding: 0 3rem 3rem 3rem
 
-    &:nth-child(3)
-      flex-basis: 34%
+      @media #{$media-md-up}
+        flex-basis: 33%
+        padding: 0 3rem 3rem 3rem
+
+    &_three
       background: $color_light
-      padding: 0 3rem 3rem 0
+
+      @media #{$media-md-up}
+        flex-basis: 34%
+        padding: 0 3rem 3rem 0

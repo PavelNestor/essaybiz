@@ -335,22 +335,24 @@ input[type='number']
     animation: fadeIn 0.3s
     animation-fill-mode: both
 
-  @media #{$media-md-up}
+  @media #{$media-xs-up}
     width: fit-content
 
 .essay
   margin-bottom: 3rem
-  padding: 2.6rem 4rem 3rem
+  padding: 2.6rem 2.9rem 2.9rem
   background: #fff
 
   @media #{$media-sm-plus-up}
     margin-bottom: 4rem
+    padding: 2.6rem 4rem 3rem
 
   &__title
     font-size: 2.2rem
     line-height: 1.3em
     color: $color_primary
     padding: 0
+    font-weight: bold
 
     @media #{$media-sm-plus-up}
       font-size: 3rem
@@ -375,7 +377,7 @@ input[type='number']
     color: $color_accent
 
   &__detail-text
-    margin: 0 1.6rem 0 0
+    margin: 0 1rem 0 0
     font-size: 1.2rem
     color: $color_primary
     font-weight: normal
