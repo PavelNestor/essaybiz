@@ -1,4 +1,5 @@
 .block-essay
+  padding-bottom: 12rem
 
   &__title
     margin-bottom: 3rem
@@ -13,7 +14,50 @@
     width: 32.6%
 
   &__subject
+    flex-basis: 56vw
+    position: relative
+    height: fit-content
+
+    &:before
+      content: ''
+      position: absolute
+      width: 2px
+      top: 0
+      left: -3rem
+      bottom: 0
+      background: $color_accent
+      height: 100%
+    
+    &-block
+      background: $color_accent
+      width: 8.8rem
+      position: absolute
+      top: 0
+      left: -11.8rem
+      height: 3.6rem
+
   &__topic
+    flex-basis: 34vw
+    position: relative
+    height: fit-content
+
+    &:before
+      content: ''
+      position: absolute
+      width: 2px
+      top: 0
+      left: -3rem
+      background: $color_secondary
+      height: 100%
+    
+    &-block
+      background: $color_secondary
+      width: 8.8rem
+      position: absolute
+      top: 0
+      left: -11.8rem
+      height: 3.6rem
+
   &__col
     &_head
       display: flex
@@ -23,8 +67,10 @@
       padding-right: 3rem
 
     &_middle
-      padding: 12rem 4rem 4rem 14.8rem
+      padding: 12rem 4rem 4rem 10vw
       display: flex
       flex-direction: column
 
     &_bottom
+      padding: 0 0 0 10vw
+      display: flex

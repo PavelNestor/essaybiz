@@ -27,7 +27,10 @@ mixin essayDetails(words, date, pages)
       p.essay__detail-text.essay__detail-slash /
       p.essay__detail-text= pages
 
-
 mixin topicsItem(options)
   .hot__topics-item(class!=attributes.class)
     .hot__topics-text= options.topics
+
+mixin topicsFreeItem(options)
+  .hot__topics-item(class!=attributes.class)
+    .hot__topics-text= options.free
