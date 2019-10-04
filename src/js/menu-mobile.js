@@ -1,10 +1,10 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const menuOpen = $("#menu-open");
-const menuClose = $("#menu-close");
-const menuContent = $("#menu-mobile");
-// const body = $("body");
+const menuOpen = $('#menu-open');
+const menuClose = $('#menu-close');
+const menuContent = $('#menu-mobile');
+// const body = $('body');
 
 // let scrollPosition = 0;
 
@@ -26,6 +26,6 @@ const menuContent = $("#menu-mobile");
     // body.classList.remove('fixedBody');
   };
 
-  menuOpen.addEventListener("click", onOpenMenu);
-  menuClose.addEventListener("click", onCloseMenu);
+  menuOpen.addEventListener('click', onOpenMenu);
+  menuClose.addEventListener('click', onCloseMenu);
 })();

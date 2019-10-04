@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 // upload file
-$(".upload").upload({
+$('.upload').upload({
   action: '#', // TODO change to real handler
   label: 'Drop Your File Here or Click to Upload',
   autoUpload: true

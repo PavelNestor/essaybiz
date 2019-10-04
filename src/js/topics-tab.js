@@ -12,10 +12,10 @@ const $$ = document.querySelectorAll.bind(document);
   };
 
   const tabToggler = index => {
-    tabcontents.forEach(tabContent => tabContent.style.display = "none");
+    tabcontents.forEach(tabContent => tabContent.style.display = 'none');
     tablinks.forEach(tabLink => tabLink.classList.remove('active'));
 
-    tabcontents[index].style.display = "flex";
+    tabcontents[index].style.display = 'flex';
     tablinks[index].classList.add('active');
   };
 
@@ -35,10 +35,10 @@ const $$ = document.querySelectorAll.bind(document);
   };
 
   const tabToggler = index => {
-    tabcontentsFree.forEach(tabContent => tabContent.style.display = "none");
+    tabcontentsFree.forEach(tabContent => tabContent.style.display = 'none');
     tablinks.forEach(tabLink => tabLink.classList.remove('active'));
 
-    tabcontentsFree[index].style.display = "flex";
+    tabcontentsFree[index].style.display = 'flex';
     tablinks[index].classList.add('active');
   };
 
