@@ -22,3 +22,9 @@ const _$$ = document.querySelectorAll.bind(document);
 //   menuClose.addEventListener("click", onToogleMenu);
 // })();
 
+
+$(".upload").upload({
+  action: '#', // TODO change to real handler
+  label: 'Drop Your File Here or Click to Upload',
+  autoUpload: true
+});

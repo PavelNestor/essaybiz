@@ -1,1 +1,98 @@
 .footer
+  display: flex
+  flex-direction: column-reverse
+
+  @media #{$media-md-up}
+    flex-direction: row
+
+  &-right
+    &__title
+      margin-bottom: 3.5rem
+      margin-left: 3rem
+
+      @media #{$media-md-up}
+        margin-left: 0
+
+  &__text
+    font-size: 1.6rem
+    line-height: 1.3em
+    margin-bottom: 3rem
+
+    @media #{$media-md-up}
+      margin-bottom: 16rem
+
+  &__title
+    margin-bottom: 3.5rem
+    font-size: 4rem
+
+  &-contact
+    &__title
+      font-size: 2rem
+      line-height: .9em
+      color: $color_accent
+
+    &__col
+      flex-basis: 50%
+    &__wrap
+      display: flex
+      margin-bottom: 5rem
+      flex-direction: column
+
+      @media #{$media-md-up}
+        flex-direction: row
+
+  &__small
+    font-size: 1.2rem
+    margin-right: 1rem
+
+    @media #{$media-md-up}
+      margin-right: 3rem
+
+    &_wrap
+      display: flex
+      justify-content: space-between
+
+      @media #{$media-md-up}
+        justify-content: flex-start
+
+  &__col
+    justify-content: flex-start
+
+    &:nth-child(1)
+      background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/footer/footer-bg.jpg")
+      padding: 5rem 4.8rem
+
+      @media #{$media-md-up}
+        padding: 23rem 10vw 10rem
+
+    &:nth-child(2)
+      padding: 5rem 2rem
+
+      @media #{$media-md-up}
+        padding: 23rem 4rem 10rem
+
+  &-form
+    &__input
+      margin-bottom: 1rem
+
+    &__textarea
+      margin-bottom: 3.5rem
+
+  &-list
+    margin-bottom: 2rem
+    color: #fff
+    font-size: 1.6rem
+    line-height: 1.2em
+
+    &__link
+      font-size: 1.6rem
+      line-height: 1.3em
+      padding: 0
+
+    &__img
+      width: 2rem
+      height: 2rem
+      margin-right: 1rem
+
+    &__item
+      margin-bottom: 1rem
