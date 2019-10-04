@@ -1,0 +1,49 @@
+.menu-mobile
+  background: $color_accent
+  transform: translateY(-100%)
+  position: fixed
+  top: 0
+  left: 0
+  right: -17px
+  bottom: 0
+  padding: 2.5rem 0
+  z-index: 999
+  overflow-x: scroll
+  transition: .4s
+
+  &_active
+    transform: translateY(0)
+
+  &__img-wrap
+    padding: .5rem
+    padding-left: 0
+    cursor: pointer
+    height: auto
+
+  &__header
+  &__content
+    padding: 10rem 5rem 0
+
+  &__link
+    font-family: $font-family_accent
+    font-weight: 900
+    font-size: 1.4rem
+    line-height: 1em
+    color: $color_primary
+    display: block
+    height: auto
+    margin-bottom: 2rem
+    text-transform: uppercase
+
+  &__title
+    font-weight: 900
+    font-size: 2rem
+    line-height: .9em
+    color: #fff
+    display: block
+    text-transform: uppercase
+    font-family: $font-family_accent
+
+  &__close
+    width: 3rem
+    height: 3rem

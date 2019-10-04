@@ -4,9 +4,27 @@
   padding: 0
   align-items: center
   width: 100%
+  transition: .4s linear
 
   @media #{$media-md-up}
     padding: 4.5rem 0
+
+  &_active
+    position: fixed
+    top: -7.7rem
+    left: 0
+    right: 0
+    height: 7.7rem
+    z-index: 10
+    transition: transform .4s linear
+    background: $color_secondary
+    transform: translateY(100%)
+
+    @media #{$media-md-up}
+      top: -8rem
+      height: 8rem
+      padding: 2rem 0
+
 
   .menu
     margin: 0
@@ -76,3 +94,17 @@
 
     @media #{$media-md-up}
       display: none
+
+    &-wrap
+      width: fit-content
+
+    &-login
+      height: 2.7rem
+      width: 2.7rem
+
+    &-logo
+      height: 2.7rem
+
+    &-burger
+      width: 3rem
+      height: 2.7rem
