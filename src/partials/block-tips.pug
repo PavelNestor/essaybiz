@@ -1,0 +1,111 @@
+include mixin
+
+-
+  var popularEssays = [
+    'Argumentative essay',
+    'Argument Essay Topics',
+    'Cause and Effect essay',
+    'Common App Essay',
+    'Compare and Contrast essay',
+    'Controversial Essay',
+    'Definition Essay',
+    'Descriptive Essay',
+    'Evaluation Essay',
+    'Exploratory Essay',
+    'Expository Essay',
+    'Exemplification Essay',
+    'Informative Essay',
+    'Narrative Essay',
+    'Personal Essay',
+    'Persuasive Essay',
+    'Problem Solution Essay',
+    'Process Analysis Essay',
+    'Process Essay',
+    'Proposal Essay',
+    'Reflective Essay',
+    'Satire Essay',
+    'Romeo & Juliet Essay',
+    'Help me write my essay',
+    'Deforestation Definition',
+    'Classification Essay',
+    'Good Research Essay',
+    'College Essay'
+  ];
+
+  var tips = [
+    {
+      title: 'Start by Choosing a Topic',
+      text: 'Sometimes, when the topic hasn’t been provided for you, it’s up to you to pick what you want to write about. When this happens, you have to think carefully about what subject you want to discuss. '
+    },
+    {
+      title: 'Write Down Your Thesis Statement',
+      text: 'After deciding what you will be writing about in your essay, it’s time to pick a side. Regardless of what the topic is, there is going to be a view that you have on the subject. Your view may not be the same as everyone else’s, and that’s going to be the point of writing your essay paper. '
+    },
+    {
+      title: 'Planning Ahead for What’s to Come in Your Essay Writing',
+      text: 'No matter how many essays you have written, you need to plan ahead to ensure you have enough time. You want every section to be adequately backed up with the details your university professor is going to expect to see. '
+    },
+    {
+      title: 'Create A Visual Before Writing an Essay',
+      text: 'Before you start doing any writing of your essay, start with a simple diagram. Put your main idea or thesis sentence in a bubble in the middle of the page. Then, start drawing out branches and write down any ideas that you have that can support your message. Get a clear picture of what your diagram should look like here. '
+    },
+    {
+      title: 'Writing the Body Paragraphs for Your Essay',
+      text: 'You may be thinking, why would I write the body before the introduction when the introduction comes first? This tip is one that you will be thankful for. The introduction will come next. It is easiest to write your body first, after you have all of the main ideas written down. '
+    },
+    {
+      title: 'Writing Your Essay Introduction',
+      text: 'Now that you have your body done, you can go back and do your introduction. You already have your thesis statement written so that is going to be part of the five or six sentences that you include in this first paragraph. '
+    },
+    {
+      title: 'Finish with Writing Your Essay Conclusion',
+      text: 'Save your essay conclusion writing until the end. This is the easiest part of the whole process. All you have to do is reinstate what you wrote for an opinion or thesis so that he reader is reminded where you stand on the subject. '
+    },
+    {
+      title: 'Polishing Up Your Essay Writing',
+      text: 'Now that the main part of your essay writing is complete, it’s time to polish it up and give it all the final touches. You want your essay writing to be professional and clean, so start from the beginning and work your way through. '
+    },
+    {
+      title: 'Keep Your Essay Writing as Interesting as Possible',
+      text: 'Let’s face it, some essay writing topics are just boring. No matter what you do to try and liven it up, you can’t seem to come with anything interesting. Instead of just leaving your essay writing as it is, know that there are other actions you can take to bring some life to your paper. '
+    },
+  ]
+
+section.tips
+  .tips__col
+    h1.tips__title
+      | Helpful tips 
+      span.tips__accent & 
+      br 
+      | tricks for writing
+      br 
+      | essay
+
+    p.tips__subtitle Here are some topics to help you to write essay quickly
+
+    .tips__free
+      .block-essay__subject-block
+      h3.block-essay__subtitle
+        | Free essays
+        br
+        | by subject:
+
+      each popularEssay in popularEssays
+        +topicsItemTips(popularEssay)(class='tab__content-item')
+
+  .tips__col
+    .tips__line
+
+    each tip in tips
+      +tipsCard(tip)
+
+.block-essay__col.block-essay__col_head.tips__bg
+    .block-essay__need
+      h2.need__title 
+        | Need a custom
+        br
+        | essay?
+
+      h5.need__subtitle We will write it for you.
+
+      a(href='#').main-btn.need__btn Order now
