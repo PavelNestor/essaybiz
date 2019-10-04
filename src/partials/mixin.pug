@@ -27,6 +27,11 @@ mixin essayDetails(words, date, pages)
       p.essay__detail-text.essay__detail-slash /
       p.essay__detail-text= pages
 
+mixin topicsItemTips(options)
+  .hot__topics-item(class!=attributes.class)
+    a.tab__topics-links(href='essay-page.html')
+      .hot__topics-text= options
+
 mixin topicsItem(options)
   .hot__topics-item(class!=attributes.class)
     .hot__topics-text= options.topics
@@ -34,3 +39,9 @@ mixin topicsItem(options)
 mixin topicsFreeItem(options)
   .hot__topics-item(class!=attributes.class)
     .hot__topics-text= options.free
+
+mixin tipsCard(options)
+  .tips__card
+    h4.tips__card-title= options.title
+    p.tips__card-text= options.text
+      a(href='#').tips__card-more Read more
