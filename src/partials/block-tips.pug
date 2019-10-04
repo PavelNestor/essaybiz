@@ -81,14 +81,21 @@ section.tips
       br 
       | essay
 
+    h1.tips__title_mobile
+      | Helpful tips 
+      span.tips__accent & 
+      | tricks for
+      br
+      | writing essay
+
     p.tips__subtitle Here are some topics to help you to write essay quickly
 
     .tips__free
-      .block-essay__subject-block
+      .tips__accent-block
       h3.block-essay__subtitle
-        | Free essays
+        | Popular Types 
         br
-        | by subject:
+        | of Essays:
 
       each popularEssay in popularEssays
         +topicsItemTips(popularEssay)(class='tab__content-item')
@@ -99,8 +106,9 @@ section.tips
     each tip in tips
       +tipsCard(tip)
 
+include block-need
 .block-essay__col.block-essay__col_head.tips__bg
-    .block-essay__need
+    .block-essay__need.tips__need-block
       h2.need__title 
         | Need a custom
         br

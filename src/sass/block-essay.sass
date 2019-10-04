@@ -1,40 +1,60 @@
 .block-essay
-  padding-bottom: 12rem
+  padding-bottom: 5rem
+
+  @media #{$media-md-up}
+    padding-bottom: 12rem
 
   &__title
     margin-bottom: 3rem
+    margin-left: 2.8rem
 
   &__subtitle
+    margin-top: 0
+
   &__need
-    display: flex
-    flex-direction: column
-    justify-content: flex-start
-    background: $color_accent
-    padding: 6.8rem 4.5rem 4rem
-    width: 32.6%
+    display: none
+
+    @media #{$media-md-up}
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      background: $color_accent
+      padding: 6.8rem 4.5rem 4rem
+      width: 32.6%
 
   &__subject
     flex-basis: 56vw
     position: relative
     height: fit-content
+    margin-bottom: 4rem
+
+    @media #{$media-md-up}
+      margin-bottom: 0
 
     &:before
       content: ''
       position: absolute
       width: 2px
       top: 0
-      left: -3rem
+      left: -1rem
       bottom: 0
       background: $color_accent
       height: 100%
-    
+
+      @media #{$media-md-up}
+        left: -3rem
+
     &-block
-      background: $color_accent
-      width: 8.8rem
+      background: #E8BB46
+      width: 1.9rem
       position: absolute
       top: 0
-      left: -11.8rem
+      left: -2.9rem
       height: 3.6rem
+
+      @media #{$media-md-up}
+        left: -11.8rem
+        width: 8.8rem
 
   &__topic
     flex-basis: 34vw
@@ -46,31 +66,50 @@
       position: absolute
       width: 2px
       top: 0
-      left: -3rem
+      left: -1rem
       background: $color_secondary
       height: 100%
-    
+
+      @media #{$media-md-up}
+        left: -3rem
+
     &-block
       background: $color_secondary
-      width: 8.8rem
+      width: 1.9rem
       position: absolute
       top: 0
-      left: -11.8rem
+      left: -2.9rem
       height: 3.6rem
+
+      @media #{$media-md-up}
+        left: -11.8rem
+        width: 8.8rem
 
   &__col
     &_head
       display: flex
       align-items: center
       justify-content: flex-end
-      background: url('/img/block-essay/essay-bg.jpg') no-repeat center center / cover
+      background: url('/img/block-essay/essay-bg_mobile.jpg') no-repeat center center / cover
       padding-right: 3rem
+      height: 29rem
+
+      @media #{$media-md-up}
+        background: url('/img/block-essay/essay-bg.jpg') no-repeat center center / cover
+        height: auto
 
     &_middle
-      padding: 12rem 4rem 4rem 10vw
+      padding: 5rem 2rem
       display: flex
       flex-direction: column
+
+      @media #{$media-md-up}
+        padding: 12rem 4rem 4rem 10vw
 
     &_bottom
       padding: 0 0 0 10vw
       display: flex
+      flex-direction: column
+
+      @media #{$media-md-up}
+        flex-direction: row
