@@ -1,0 +1,52 @@
+.login
+  background: $color_accent
+  transform: translateY(-100%)
+  position: fixed
+  top: 0
+  left: 0
+  right: -17px
+  bottom: 0
+  padding: 2.5rem 0
+  z-index: 999
+  overflow-x: scroll
+  transition: .4s
+
+  &_active
+    transform: translateY(0)
+
+  &__content
+    padding: 38% 5rem 2rem
+
+  &__text
+    font-size: 1.6rem
+    line-height: 1.3em
+    color: $color_primary
+    margin-bottom: 3rem
+
+  &__title
+    text-transform: uppercase
+    font-size: 3rem
+    line-height: .9em
+    color: $color_primary
+    margin-bottom: 3rem
+
+  &__small
+    font-size: 1.4rem
+    line-height: 1.3em
+    color: $color_primary
+    margin-bottom: 3rem
+
+  &__close
+    padding: .5rem
+    padding-left: 0
+    cursor: pointer
+
+    &-img
+      width: 3rem
+      height: 2.7rem
+
+.login-form
+  margin-bottom: 3rem
+
+  &__input
+    margin-bottom: 3rem
