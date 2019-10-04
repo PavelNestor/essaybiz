@@ -1,0 +1,116 @@
+.share
+  background: $color_bg
+  display: flex
+  padding: 12rem 7.5rem 12rem 10vw
+
+  &__text
+    font-size: 1.6rem
+    line-height: 1.3em
+
+    &_one
+      margin-bottom: 3rem
+
+  &__col
+    &:nth-child(1)
+      flex-basis: 66vw
+      padding-right: 10vw
+
+    &:nth-child(2)
+      flex-basis: 34vw
+      padding-left: 4rem
+
+.checker
+  &__form
+    height: 100%
+    background: $color_bg
+
+    &-wrap
+      margin-bottom: 5rem
+
+    &-input
+      width: 100%
+      line-height: 2em
+      font-size: 1.4rem
+      border: none
+      box-shadow: none
+      border-radius: 5px
+      text-align: center
+      margin-bottom: 2rem
+      padding: .6rem
+
+      &_upload
+        background: #fff
+        border-radius: 20px
+        border: 1px dashed $color_main
+        height: 9rem
+        margin-bottom: 1.5rem
+
+      &_textarea
+        resize: none
+        height: 12rem
+        margin-bottom: 1.7rem
+
+  &__content
+    padding-bottom: 25.6rem
+    padding-right: 7vw
+
+    @media #{$media-md-up}
+      padding-bottom: 24.4rem
+      padding-right: 32vw
+
+  &__video-wrap
+    position: absolute
+    top: -21rem
+    left: 7vw
+    right: 2rem
+
+    @media #{$media-md-up}
+      left: 20.5vw
+      right: 19.3vw
+
+  &__faq
+    background: $color_main
+    padding: 35rem 2rem 9rem 7vw
+    position: relative
+
+    @media #{$media-xxs-up}
+      padding: 25rem 2rem 9rem 7vw
+
+    @media #{$media-sm-up}
+      padding: 20rem 2rem 9rem 7vw
+
+    @media #{$media-md-up}
+      padding: 28.2rem 7.4vw 9rem 11vw
+
+    &-item
+      padding: 1.3rem 3.8rem
+
+.fs-upload-target
+  font-weight: bold
+  color: $color_primary
+  padding-top: 0.6rem
+  z-index: -1
+
+  &:before
+    content: 'Or upload your file: .pdf, .docx, .txt.'
+    display: block
+    font-weight: bold
+    margin-bottom: -2px
+    font-size: 1.4rem
+    color: $color_primary
+
+.fs-upload
+  position: relative
+  margin-bottom: 3.4rem
+
+.fs-upload-input
+  opacity: 0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 1
+  font-size: 1.4rem
+  color: $color_primary
