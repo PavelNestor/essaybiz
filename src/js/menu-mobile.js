@@ -1,17 +1,31 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-(function() {
-  const menuOpen = $("#menu-open");
-  const menuClose = $("#menu-close");
-  const menuContent = $("#menu-mobile");
-  const body = $("body");
+const menuOpen = $("#menu-open");
+const menuClose = $("#menu-close");
+const menuContent = $("#menu-mobile");
+// const body = $("body");
 
-  const onToggleMenu = () => {
-    menuContent.classList.toggle('menu-mobile_active');
-    body.classList.toggle('fixedBody');
+// let scrollPosition = 0;
+
+// const calculateScrollPosition = () => {
+//   scrollPosition = document.body.getBoundingClientRect().top
+// };
+
+// window.addEventListener('scroll', calculateScrollPosition);
+
+(function() {
+  const onOpenMenu = () => {
+    // body.style.top = `${- scrollPosition}px`;
+    // body.classList.add('fixedBody');
+    menuContent.classList.add('menu-mobile_active');
   };
 
-  menuOpen.addEventListener("click", onToggleMenu);
-  menuClose.addEventListener("click", onToggleMenu);
+  const onCloseMenu = () => {
+    menuContent.classList.remove('menu-mobile_active');
+    // body.classList.remove('fixedBody');
+  };
+
+  menuOpen.addEventListener("click", onOpenMenu);
+  menuClose.addEventListener("click", onCloseMenu);
 })();
