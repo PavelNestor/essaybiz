@@ -1,13 +1,36 @@
 .latest
   &__img-wrap
-    height: 51rem
+    height: 29rem
     margin-bottom: 3rem
+
+    @media #{$media-md-up}
+      height: 51rem
+
+  &__mobile
+    display: block
+
+    @media #{$media-md-up}
+      display: none
+
+  &__desktop
+    display: none
+
+    @media #{$media-md-up}
+      display: block
 
   &__col
     &_two
-      background: $color_light
-      padding-top: 21rem
-      margin-left: -1px
+      display: none
+
+      @media #{$media-md-up}
+        background: $color_light
+        padding-top: 21rem
+        margin-left: -1px
+        display: block
 
     &_three
-      padding-top: 21rem
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        padding-top: 21rem

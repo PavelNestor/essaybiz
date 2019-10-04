@@ -87,15 +87,21 @@ section.recent.latest
 
     .latest__img-wrap
       +pictureJpg('/img/block-latest/latest-bg', 'Latest Essays')(class='latest__img')
-    each essay in latestEssaysOne
-      +essay(essay)
 
-  include block-need
+    .latest__desktop
+      each essay in latestEssaysOne
+        +essay(essay)
+
+    .latest__mobile
+      each essay in latestEssaysTwo
+        +essay(essay)
+
+  //- include block-need
   .recent__col.recent__col_two.latest__col_two
     each essay in latestEssaysTwo
       +essay(essay)
 
-  include block-need
+  //- include block-need
   .recent__col.recent__col_three.latest__col_three
     each essay in latestEssaysThreeTop
       +essay(essay)
@@ -105,3 +111,5 @@ section.recent.latest
 
     each essay in latestEssaysThreeBottom
       +essay(essay)
+
+include block-need

@@ -396,14 +396,23 @@ input[type='number']
 
 .tab
   display: flex
-  margin-top: 5rem
+  margin-top: 0
   flex-wrap: wrap
 
+  @media #{$media-md-up}
+    margin-top: 5rem
+
   &__topics-links
-    width: 26vw
+    width: 100%
+    padding: 0
+    margin: 0
+    height: auto
+
+    @media #{$media-md-up}
+      width: 26vw
 
   &__wrap
-    padding-left: 10vw
+    padding-left: 0
 
     @media #{$media-md-up}
       padding-left: 12rem
@@ -428,10 +437,13 @@ input[type='number']
     font-size: 1.6rem
     line-height: 1.8em
     color: $color_main
-    margin-right: 1rem
+    margin-right: 0
     text-transform: uppercase
     cursor: pointer
     padding: 0 1rem
+
+    @media #{$media-md-up}
+      margin-right: 1rem
 
     &.active
       background: $color_accent
@@ -453,7 +465,10 @@ input[type='number']
   &-item
   &-text
     display: inline-block
-    font-size: 2rem
+    font-size: 1.6rem
     line-height: 1.2em
     color: $color_primary
     margin-bottom: 1rem
+
+    @media #{$media-md-up}
+      font-size: 2rem
