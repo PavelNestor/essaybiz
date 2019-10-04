@@ -40,3 +40,25 @@
 .notification
   animation: notification 2s
   animation-fill-mode: both
+
+@keyframes slideInDown
+  from
+    transform: translate3d(0, -100%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+.slideInDown
+  animation: slideInDown .4s
+
+@keyframes slideOutUp
+  from
+    transform: translate3d(0, 0, 0)
+
+  to
+    visibility: hidden
+    transform: translate3d(0, -100%, 0)
+
+.slideOutUp
+  animation: slideOutUp .4s
