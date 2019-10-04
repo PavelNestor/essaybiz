@@ -1,8 +1,12 @@
 "use strict";
-import log from './test.js';
+
+const _$ = document.querySelector.bind(document);
+const _$$ = document.querySelectorAll.bind(document);
+
+// console.log('_$', _$);
 
 
-window.addEventListener('scroll', log('TEST'));
+// import { log } from './test.js';
 
 // (function() {
 //   var menuImg = document.getElementById("menu-image");
@@ -17,3 +21,4 @@ window.addEventListener('scroll', log('TEST'));
 //   menuImg.addEventListener("touch", onToogleMenu);
 //   menuClose.addEventListener("click", onToogleMenu);
 // })();
+

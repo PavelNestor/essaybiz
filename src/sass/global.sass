@@ -393,3 +393,67 @@ input[type='number']
     font-size: 1.6rem
     line-height: 1.3em
     color: $color_main
+
+.tab
+  display: flex
+  margin-top: 5rem
+  flex-wrap: wrap
+
+  &__topics-links
+    width: 26vw
+
+  &__wrap
+    padding-left: 10vw
+
+    @media #{$media-md-up}
+      padding-left: 12rem
+
+  &__content,
+  &__content_free
+    display: flex
+    flex-wrap: wrap
+
+    @media #{$media-md-up}
+
+    &-item
+      width: 80vw
+
+      @media #{$media-sm-up}
+        width: 40vw
+
+      @media #{$media-md-up}
+        width: 30vw
+
+  &__links
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: $color_main
+    margin-right: 1rem
+    text-transform: uppercase
+    cursor: pointer
+    padding: 0 1rem
+
+    &.active
+      background: $color_accent
+      color: $color_primary
+
+
+.hot__topics
+  &-wrap
+    display: flex
+
+  &-col
+    @media #{$media-sm-plus-up}
+      flex-basis: 50%
+    &:nth-child(2)
+      display: none
+      @media #{$media-md-up}
+        display: block
+
+  &-item
+  &-text
+    display: inline-block
+    font-size: 2rem
+    line-height: 1.2em
+    color: $color_primary
+    margin-bottom: 1rem
