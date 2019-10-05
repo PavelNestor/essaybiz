@@ -23,17 +23,19 @@
 
     &_sm
       content: ''
-      height: 21rem
+      height: 13rem
       width: 2px
       bottom: -4.3rem
       background: $color_accent
       right: 0
       position: absolute
       top: 0
-      left: calc(10vw - 2.8rem)
+      left: 10vw
 
       @media #{$media-md-up}
+        height: 21rem
         bottom: -5rem
+        left: calc(10vw - 2.8rem)
 
     &:after
       content: ''

@@ -13,15 +13,21 @@
         background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/page/header.jpg")
         flex-basis: 75%
 
-        @media #{$media-xs-up}
+        @media #{$media-md-up}
           flex-basis: 66%
 
       &:nth-child(2)
         background: $color_accent
         flex-basis: 25%
 
-        @media #{$media-xs-up}
+        @media #{$media-md-up}
           flex-basis: 34%
+
+  &__social-wrap
+    display: flex
+
+    @media #{$media-md-up}
+      display: block
 
   &__wrap
     position: relative
@@ -52,8 +58,13 @@
         // width: 8.8rem
 
   &__content
-    padding: 12rem 3rem 10rem 10vw
+    flex-direction: column
+    padding: 4rem
     display: flex
+
+    @media #{$media-md-up}
+      flex-direction: row
+      padding: 12rem 3rem 10rem 10vw
 
   &__name
     font-weight: 900
@@ -65,10 +76,18 @@
 
   &__col
     &:nth-child(1)
-      flex-basis: 24vw
+
+      @media #{$media-md-up}
+        flex-basis: 24vw
 
     &:nth-child(2)
       flex-basis: 58vw
+
+    &_terms
+      display: none
+
+      @media #{$media-md-up}
+        display: block
 
   &__text
     &_one
@@ -78,6 +97,12 @@
     background: url('/img/page/about-bg.jpg') no-repeat center center / cover
 
   &-terms
+    &__block
+      height: 11rem
+
+      @media #{$media-md-up}
+        height: 18.8rem
+
     &__big-title
       font-family: $font-family_accent
       font-weight: 900
@@ -105,7 +130,7 @@
         line-height: 1.5em
         color: #4F4F4F
 
-        @media #{$media-xs-up}
+        @media #{$media-md-up}
           margin-bottom: 1.3rem
 
     &__text
