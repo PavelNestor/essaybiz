@@ -21,6 +21,20 @@
       width: 8.8rem
       height: 16rem
 
+    &_sm
+      content: ''
+      height: 21rem
+      width: 2px
+      bottom: -4.3rem
+      background: $color_accent
+      right: 0
+      position: absolute
+      top: 0
+      left: calc(10vw - 2.8rem)
+
+      @media #{$media-md-up}
+        bottom: -5rem
+
     &:after
       content: ''
       height: 5rem

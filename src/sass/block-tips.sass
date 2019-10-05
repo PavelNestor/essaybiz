@@ -38,6 +38,9 @@
     margin-bottom: 3.3rem
     display: none
 
+    @media #{$media-md-up}
+      display: block
+
     &_mobile
       display: block
       margin-bottom: 3rem
@@ -64,11 +67,12 @@
       bottom: 0
       background: $color_accent
 
+      @media #{$media-md-up}
+        left: -3rem
+        // display: none
+
     @media #{$media-md-up}
       margin-bottom: 0
-
-      &:before
-        display: none
 
   &__bg
     height: 29rem
