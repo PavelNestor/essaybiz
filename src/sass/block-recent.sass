@@ -5,6 +5,22 @@
   @media #{$media-md-up}
     flex-direction: row
 
+  &__accent-line
+    content: ''
+    height: 13rem
+    width: 2px
+    bottom: -4.3rem
+    background: $color_accent
+    right: 0
+    position: absolute
+    top: 0
+    left: 10vw
+
+    @media #{$media-md-up}
+      height: 21rem
+      bottom: -5rem
+      left: calc(10vw - 2.8rem)
+
   &__accent-block
     width: 1.9rem
     height: 8.7rem
@@ -37,6 +53,9 @@
         bottom: -5rem
         left: calc(10vw - 2.8rem)
 
+      &_last
+        left: 8.7rem
+
     &:after
       content: ''
       height: 5rem
@@ -60,7 +79,15 @@
     line-height: 1em
 
     @media #{$media-md-up}
-      margin: 12rem 0 5rem 14rem
+      margin: 12rem 0 5rem 11.8rem
+
+    &_two
+      @media #{$media-md-up}
+        margin: 12rem 0 5rem 13.1rem
+
+    &_three
+      @media #{$media-md-up}
+        margin: 12rem 0 5rem 13.1rem
 
   &__col
     position: relative
@@ -70,19 +97,19 @@
       background: $color_light
 
       @media #{$media-md-up}
-        flex-basis: 33%
-        padding: 0 0 3rem 3rem
+        flex-basis: 32.6%
+        padding: 0 0 0 3rem
 
     &_two
       background: $color_bg
 
       @media #{$media-md-up}
-        flex-basis: 33%
-        padding: 0 3rem 3rem 3rem
+        flex-basis: 34.75%
+        padding: 0 3rem 0 3rem
 
     &_three
       background: $color_light
 
       @media #{$media-md-up}
-        flex-basis: 34%
-        padding: 0 3rem 3rem 0
+        flex-basis: 32.6%
+        padding: 0 3rem 0 0

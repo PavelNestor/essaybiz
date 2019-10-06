@@ -92,10 +92,8 @@ section.tips
 
     .tips__free
       .tips__accent-block.wow.clipInLeft
-      h3.block-essay__subtitle
-        | Popular Types 
-        br
-        | of Essays:
+      h3.block-essay__subtitle.tips__popular
+        | Popular Types of Essays:
 
       each popularEssay in popularEssays
         +topicsItemTips(popularEssay)(class='tab__content-item')

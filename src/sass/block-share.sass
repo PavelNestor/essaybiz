@@ -16,9 +16,15 @@
     line-height: 1.3em
     margin-bottom: 3rem
 
+    &_terms
+      font-size: 1.2rem
+
+      &-link
+        text-decoration: underline
+
   &__col
     &:nth-child(1)
-      flex-basis: 66vw
+      flex-basis: 69vw
       padding-right: 0
 
       @media #{$media-md-up}
@@ -29,7 +35,7 @@
       padding-left: 3rem
 
       @media #{$media-md-up}
-        padding-left: 4rem
+        padding-left: 4.8rem
 
 .checker
   &__form
@@ -46,28 +52,41 @@
       border: none
       box-shadow: none
       border-radius: 0
-      text-align: center
       margin-bottom: 2rem
       padding: .6rem
 
       @media #{$media-md-up}
         border-radius: 5px
 
+      &::placeholder
+          font-size: 1.4rem
+          text-align: center
+
       &_upload
         background: #fff
         border-radius: 0
         border: 1px dashed $color_main
         height: 9rem
+        text-align: center
         margin-bottom: 1.5rem
 
         @media #{$media-md-up}
           border-radius: 5px
+
+        &::placeholder
+          font-size: 1.4rem
+          text-align: center
 
 
       &_textarea
         resize: none
         height: 12rem
         margin-bottom: 1.7rem
+
+        &::placeholder
+          padding: 4.8rem
+          font-size: 1.4rem
+          text-align: center
 
   &__content
     padding-bottom: 25.6rem
@@ -107,7 +126,7 @@
 .fs-upload-target
   font-weight: bold
   color: $color_primary
-  padding-top: 0.6rem
+  padding-top: 1.1rem
   z-index: -1
 
   &:before
@@ -120,7 +139,7 @@
 
 .fs-upload
   position: relative
-  margin-bottom: 3.4rem
+  margin-bottom: 2.4rem
 
 .fs-upload-input
   opacity: 0
