@@ -298,9 +298,13 @@ input[type='number']
   &__input
     border-top-right-radius: 0
     border-bottom-right-radius: 0
+    height: 4.9rem
+
+    @media #{$media-md-up}
+      height: 3.8rem
 
   &__button
-    padding: .6rem 1rem
+    padding: .6rem 1.2rem .6rem .6rem
     background: #fff
     font-size: 1.6rem
     border: none
@@ -308,13 +312,16 @@ input[type='number']
     border-top-left-radius: 0
     border-bottom-left-radius: 0
     width: 4rem
+    margin-left: -1px
+    height: 4.9rem
+
+    @media #{$media-md-up}
+      height: 3.8rem
 
     &:hover
 
 .main-btn
-  // background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)
-  background-image: linear-gradient(to right, #66938D 0%, 51%, #EB5757 100%)
-  // background-position: left center
+  background: linear-gradient(to right, #66938D 0%, #EB5757 50%, #66938D 100%)
   transition: 1s
   border-radius: 2px
   color: #fff
@@ -323,17 +330,13 @@ input[type='number']
   justify-content: center
   font-weight: bold
   font-size: 1.6rem
-  line-height: 1.2em
-  // background-position: 0 0
+  line-height: 1
   width: 100%
   padding: 1rem 5rem
+  background-size: 200% auto
 
   &:hover
-    // background-position: right center
-    background-image: linear-gradient(to left, #66938D 0%, #EB5757 100%)
-    transition: 1s
-    animation: fadeIn 0.3s
-    animation-fill-mode: both
+    background-position: right center
 
   @media #{$media-xs-up}
     width: fit-content
@@ -370,7 +373,7 @@ input[type='number']
   background: #fff
 
   @media #{$media-sm-plus-up}
-    margin-bottom: 4rem
+    margin-bottom: 2.7rem
     padding: 2.6rem 4rem 3rem
 
   &__title
@@ -381,8 +384,7 @@ input[type='number']
     font-weight: bold
 
     @media #{$media-sm-plus-up}
-      font-size: 3rem
-      line-height: 1.15em
+      line-height: 1.4em
 
   &__title_top
     font-size: 2rem
@@ -394,28 +396,31 @@ input[type='number']
   &__detail-block
     display: flex
     align-items: center
-    padding-top: 1rem
 
   &__detail-img
     height: 1rem
 
-  &__detail-slash
-    color: $color_accent
-
   &__detail-text
-    margin: 0 1rem 0 0
+    margin: 0 .7rem 0 0
     font-size: 1.2rem
     color: $color_primary
     font-weight: normal
 
-    @media #{$media-sm-plus-up}
-      margin: 0 1rem 0 0
+    // @media #{$media-sm-plus-up}
+    //   margin: 0 .5rem 0 0
+
+  &__detail-slash
+    color: $color_accent
+    // margin: 0 0.7rem 0 0
+
+    // @media #{$media-sm-plus-up}
+    //   margin: 0 0.7rem 0 0
 
   &__words-block
   &__date-block
   &__pages-block
   &__text
-    margin-top: 1rem
+    // margin-top: 1rem
     font-size: 1.6rem
     line-height: 1.3em
     color: $color_main
@@ -426,7 +431,7 @@ input[type='number']
   flex-wrap: wrap
 
   @media #{$media-md-up}
-    margin-top: 5rem
+    margin-top: 3.3rem
 
   &__topics-links
     width: 100%
@@ -435,13 +440,13 @@ input[type='number']
     height: auto
 
     @media #{$media-md-up}
-      width: 26vw
+      width: 24vw
 
   &__wrap
     padding-left: 0
 
     @media #{$media-md-up}
-      padding-left: 12rem
+      padding-left: 11rem
 
   &__content,
   &__content_free
@@ -469,7 +474,7 @@ input[type='number']
     padding: 0 1rem
 
     @media #{$media-md-up}
-      margin-right: 1rem
+      margin-right: .4rem
 
     &.active
       background: $color_accent
@@ -497,7 +502,7 @@ input[type='number']
     margin-bottom: 1rem
 
     @media #{$media-md-up}
-      font-size: 2rem
+      // font-size: 2rem
 
 .fixedBody
   position: fixed

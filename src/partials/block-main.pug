@@ -1,6 +1,8 @@
 section.main
   .main__col
-    div
+    //- .main__wrap
+    //-   .main__wrap-col
+    .main__left-wrap
       h1.main__slogan
         .white Search our 
         | free essays 
@@ -12,13 +14,22 @@ section.main
           input.search__button(type='image', src='/img/icons/search.svg')
 
       ul.list.main__list
-        li.list__item.white Writing your successful essay!
-        li.list__item.white We make your writing dreams come true, bright and sound with our help 24/7!
-        li.list__item.white Get your order in few steps and succeed in a day!
-        li.list__item.white Our company helps you to create first-rate academic writing prepared by our pro essay writers!
+        li.list__item.main__list-item.white Writing your successful essay!
+        li.list__item.main__list-item.white We make your writing dreams come true, bright and sound with our help 24/7!
+        li.list__item.main__list-item.white Get your order in few steps and succeed in a day!
+        li.list__item.main__list-item.white Our company helps you to create first-rate academic writing prepared by our pro essay writers!
+
+      //- .main__wrap-col
+     
 
   .main__col
-    h2.main__right_title Need a custom essay?
-    h5.main__right_subtitle We will write it for you.
+    .main__right-wrap
+      h2.main__right_title 
+        | Need a
+        br 
+        | custom essay?
+      h5.main__right_subtitle We will write it for you.
 
-    a(href='#').main-btn.main__right_btn Order now
+      a(href='#').main-btn.main__right_btn Order now
+
+  img.main__scroll-down(src="/img/icons/down-arrow.svg", alt="Scroll down")

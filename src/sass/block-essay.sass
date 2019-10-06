@@ -8,8 +8,12 @@
     margin-bottom: 3rem
     margin-left: 2.8rem
 
+    @media #{$media-md-up}
+      margin: 0 0 0 .3rem
+
   &__subtitle
     margin-top: 0
+    margin-bottom: 1.5rem
 
   &__need
     display: none
@@ -19,11 +23,14 @@
       flex-direction: column
       justify-content: flex-start
       background: $color_accent
-      padding: 6.8rem 4.5rem 4rem
-      width: 32.6%
+      padding: 7rem 1.6rem 4rem 4.6rem
+      width: 31.2%
+
+    .need__btn
+      margin-bottom: 0
 
   &__subject
-    flex-basis: 56vw
+    flex-basis: 59.4vw
     position: relative
     height: fit-content
     margin-bottom: 4rem
@@ -48,12 +55,12 @@
       background: #E8BB46
       width: 1.9rem
       position: absolute
-      top: 0
+      top: -1px
       left: -2.6rem
       height: 3.6rem
 
       @media #{$media-md-up}
-        left: -11.8rem
+        left: -11.7rem
         width: 8.8rem
 
   &__topic
@@ -77,12 +84,12 @@
       background: $color_secondary
       width: 1.9rem
       position: absolute
-      top: 0
+      top: -1px
       left: -2.6rem
       height: 3.6rem
 
       @media #{$media-md-up}
-        left: -11.8rem
+        left: -11.7rem
         width: 8.8rem
 
   &__col
@@ -104,10 +111,10 @@
       flex-direction: column
 
       @media #{$media-md-up}
-        padding: 12rem 4rem 4rem 10vw
+        padding: 12rem 4rem 2.5rem 10vw
 
     &_bottom
-      padding: 0 0 0 10vw
+      padding: 0 0 0 10.3vw
       display: flex
       flex-direction: column
 
