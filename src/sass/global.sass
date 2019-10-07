@@ -298,9 +298,13 @@ input[type='number']
   &__input
     border-top-right-radius: 0
     border-bottom-right-radius: 0
+    height: 4.9rem
+
+    @media #{$media-md-up}
+      height: 3.8rem
 
   &__button
-    padding: .6rem 1rem
+    padding: .6rem 1.2rem .6rem .6rem
     background: #fff
     font-size: 1.6rem
     border: none
@@ -308,13 +312,16 @@ input[type='number']
     border-top-left-radius: 0
     border-bottom-left-radius: 0
     width: 4rem
+    margin-left: -1px
+    height: 4.9rem
+
+    @media #{$media-md-up}
+      height: 3.8rem
 
     &:hover
 
 .main-btn
-  // background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)
-  background-image: linear-gradient(to right, #66938D 0%, 51%, #EB5757 100%)
-  // background-position: left center
+  background: linear-gradient(to right, #66938D 0%, #EB5757 50%, #66938D 100%)
   transition: 1s
   border-radius: 2px
   color: #fff
@@ -323,17 +330,179 @@ input[type='number']
   justify-content: center
   font-weight: bold
   font-size: 1.6rem
-  line-height: 1.2em
-  // background-position: 0 0
+  line-height: 1
   width: 100%
   padding: 1rem 5rem
-  
+  background-size: 200% auto
+
   &:hover
-    // background-position: right center
-    background-image: linear-gradient(to left, #66938D 0%, #EB5757 100%)
-    transition: 1s
-    animation: fadeIn 0.3s
-    animation-fill-mode: both
+    background-position: right center
+
+  @media #{$media-xs-up}
+    width: fit-content
+
+  &_fb
+    background: url('/img/icons/fb.svg') no-repeat 2rem, #3B5998
+    margin-top: 3rem
+
+.social-btn
+  width: 4rem
+  height: 4rem
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 1rem
+  margin-right: 2px
+  margin-bottom: 0
 
   @media #{$media-md-up}
-    width: fit-content
+    margin-bottom: 2px
+
+  &_fb
+    background: #3A559F
+
+  &_twitter
+    background: #55ACEE
+
+  &_telegram
+    background: #41B4E6
+
+.essay
+  margin-bottom: 3rem
+  padding: 2.6rem 2.9rem 2.9rem
+  background: #fff
+
+  @media #{$media-sm-plus-up}
+    margin-bottom: 2.7rem
+    padding: 2.6rem 4rem 3rem
+
+  &__title
+    font-size: 2.2rem
+    line-height: 1.3em
+    color: $color_primary
+    padding: 0
+    font-weight: bold
+
+    @media #{$media-sm-plus-up}
+      line-height: 1.4em
+
+  &__title_top
+    font-size: 2rem
+    line-height: 1.3em
+
+  &__details
+    display: flex
+
+  &__detail-block
+    display: flex
+    align-items: center
+
+  &__detail-img
+    height: 1rem
+
+  &__detail-text
+    margin: 0 .7rem 0 0
+    font-size: 1.2rem
+    color: $color_primary
+    font-weight: normal
+
+    // @media #{$media-sm-plus-up}
+    //   margin: 0 .5rem 0 0
+
+  &__detail-slash
+    color: $color_accent
+    // margin: 0 0.7rem 0 0
+
+    // @media #{$media-sm-plus-up}
+    //   margin: 0 0.7rem 0 0
+
+  &__words-block
+  &__date-block
+  &__pages-block
+  &__text
+    // margin-top: 1rem
+    font-size: 1.6rem
+    line-height: 1.3em
+    color: $color_main
+
+.tab
+  display: flex
+  margin-top: 0
+  flex-wrap: wrap
+
+  @media #{$media-md-up}
+    margin-top: 3.3rem
+
+  &__topics-links
+    width: 100%
+    padding: 0
+    margin: 0
+    height: auto
+
+    @media #{$media-md-up}
+      width: 24vw
+
+  &__wrap
+    padding-left: 0
+
+    @media #{$media-md-up}
+      padding-left: 11rem
+
+  &__content,
+  &__content_free
+    display: flex
+    flex-wrap: wrap
+
+    @media #{$media-md-up}
+
+    &-item
+      width: 80vw
+
+      @media #{$media-sm-up}
+        width: 40vw
+
+      @media #{$media-md-up}
+        width: 30vw
+
+  &__links
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: $color_main
+    margin-right: 0
+    text-transform: uppercase
+    cursor: pointer
+    padding: 0 1rem
+
+    @media #{$media-md-up}
+      margin-right: .4rem
+
+    &.active
+      background: $color_accent
+      color: $color_primary
+
+
+.hot__topics
+  &-wrap
+    display: flex
+
+  &-col
+    @media #{$media-sm-plus-up}
+      flex-basis: 50%
+    &:nth-child(2)
+      display: none
+      @media #{$media-md-up}
+        display: block
+
+  &-item
+  &-text
+    display: inline-block
+    font-size: 1.6rem
+    line-height: 1.2em
+    color: $color_primary
+    margin-bottom: 1rem
+
+    @media #{$media-md-up}
+      // font-size: 2rem
+
+.fixedBody
+  position: fixed

@@ -4,13 +4,66 @@
   padding: 0
   align-items: center
   width: 100%
+  transition: .4s linear
+  z-index: 1
 
   @media #{$media-md-up}
     padding: 4.5rem 0
 
+  &__link
+    padding: 0
+    height: auto
+    width: fit-content
+    display: inline
+
+  &_active
+    position: fixed
+    top: -6rem
+    left: 0
+    right: 0
+    height: 6rem
+    z-index: 10
+    transition: transform .4s linear
+    background: $color_secondary
+    transform: translateY(100%)
+
+    @media #{$media-md-up}
+      padding: 0
+
+    .navbar__mobile
+      padding: 0
+
+      .navbar__mobile-wrap
+        margin-right: 2px
+
+    .navbar__col
+      &:nth-child(1)
+        // padding: 0 5.3rem 0 2.8rem
+        flex-basis: 67.4%
+
+      &:nth-child(2)
+        // padding: 1.7rem 3rem 0 4rem
+        flex-basis: 32.6%
+        background: $color_accent
+        height: 100%
+
+        @media #{$media-lg-up}
+          // padding: 1.7rem 3rem 0 6.3rem
+
+    .navbar__col
+      .menu__left
+        margin-bottom: 0
+
+    .navbar__col
+      .menu
+        .menu__item
+          .menu__link
+            font-size: 1.4rem
+
+
   .menu
     margin: 0
-    margin-bottom: 1rem
+    // margin-bottom: 1rem
 
     &__img-search
       margin-right: 1rem
@@ -46,6 +99,7 @@
       display: flex
       flex-direction: column
       justify-content: center
+      align-items: center
 
     &:nth-child(1)
       flex-basis: 67%
@@ -71,8 +125,22 @@
   &__mobile
     display: flex
     justify-content: space-between
-    padding: 2rem 2rem 2rem 0
+    padding: 1.6rem 0 2rem 0
     width: 100%
 
     @media #{$media-md-up}
       display: none
+
+    &-wrap
+      width: fit-content
+
+    &-login
+      height: 2.7rem
+      width: 2.7rem
+
+    &-logo
+      height: 2.7rem
+
+    &-burger
+      width: 3rem
+      height: 2.7rem

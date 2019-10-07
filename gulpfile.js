@@ -54,6 +54,11 @@ const path = {
 };
 path.dest = isBuild ? path.build : path.dist;
 
+const files = { 
+  scssPath: 'app/scss/**/*.scss',
+  jsPath: 'src/js/**/*.js'
+}
+
 // SASS
 gulp.task('sass', function () {
   var outputStyle = isBuild ? 'compressed' : 'expanded';
@@ -103,15 +108,26 @@ gulp.task('scripts', function(){
     .pipe(plumber())
     .pipe(babel({
       presets: [
-        ['@babel/env', {
-          modules: true
-        }]
+        ['@babel/env']
       ]
     }))
     .pipe(uglify())
     .pipe(gulp.dest(path.dest.js))
     .pipe(reload({stream:true}));
 });
+
+// function jsTask(){
+//   return gulp.src([files.jsPath])
+//       .pipe(concat('all.js'))
+//       .pipe(uglify())
+//       .pipe(dest('dist')
+//   );
+// };
+
+// function watchTask(){
+//   watch([files.jsPath], 
+//       parallel(jsTask));
+// };
 
 // IMAGES
 gulp.task('images', function(){
@@ -149,3 +165,8 @@ gulp.task('watch', function() {
 
 // DEFAULT
 gulp.task('default', gulp.parallel('sass', 'pug', 'scripts', 'images', 'fonts', 'browser-sync', 'watch'));
+
+// exports.default = series(
+//   parallel(jsTask), 
+//   watchTask
+// );

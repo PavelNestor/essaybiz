@@ -30,7 +30,7 @@
     transform: translateY(-20px) translateX(-50%) translateZ(0)
 
 .fadeIn
-  animation: fadeIn 0.3s
+  animation: fadeIn 0.6s
   animation-fill-mode: both
 
 .fadeOut
@@ -40,3 +40,82 @@
 .notification
   animation: notification 2s
   animation-fill-mode: both
+
+@keyframes slideInDown
+  from
+    transform: translate3d(0, -100%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+.slideInDown
+  animation: slideInDown .4s
+
+@keyframes slideOutUp
+  from
+    transform: translate3d(0, 0, 0)
+
+  to
+    visibility: hidden
+    transform: translate3d(0, -100%, 0)
+
+.slideOutUp
+  animation: slideOutUp .4s
+
+
+@keyframes slideInLeft
+  from
+    transform: translate3d(-100%, 0, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+.slideInLeft
+  animation: slideInLeft 1s
+
+
+@keyframes clip-in-right
+  from
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
+  to
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+.clipInRight
+  animation: clip-in-right 1s
+  animation-fill-mode: both
+
+
+@keyframes clip-in-left
+  from
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)
+  to
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+.clipInLeft
+  animation: clip-in-left 1s
+  animation-fill-mode: both
+
+
+@keyframes clip-in-left-2
+  from
+    clip-path: inset(0 0 0 100%)
+  to
+    clip-path: inset(0 0 0 0)
+
+.clipInLeft2
+  animation: clip-in-left-2 1s
+  animation-fill-mode: both
+
+
+@keyframes clip-in-down
+  from
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)
+  to
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+.clipInDown
+  animation: clip-in-down 2s
+  animation-fill-mode: both
+

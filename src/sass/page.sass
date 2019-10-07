@@ -1,0 +1,165 @@
+.page
+  &__header
+    height: 8rem
+    display: flex
+    background: #66938D
+
+    @media #{$media-md-up}
+      height: 20rem
+      background: none
+
+    &-col
+      height: 100%
+
+      &:nth-child(1)
+        background: none
+
+        @media #{$media-md-up}
+          background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/page/header.jpg")
+          flex-basis: 67.4%
+
+      &:nth-child(2)
+        background: none
+
+        @media #{$media-md-up}
+          background: $color_accent
+          flex-basis: 32.6%
+
+  &__social
+    &-wrap
+      display: flex
+      margin-bottom: 1rem
+
+      @media #{$media-md-up}
+        display: block
+
+    &-item
+      display: flex
+      align-items: center
+
+    &-text
+      font-family: $font-family_montserrat, sans-serif
+      font-weight: bold
+      font-size: 1.4rem
+      line-height: 1em
+      color: $color_primary
+      margin: 0 0.5rem
+
+  &__wrap
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      width: 2px
+      top: 0
+      left: 7vw
+      bottom: 0
+      background: $color_accent
+
+      @media #{$media-md-up}
+        // left: -3rem
+
+    &-block
+      background: center 4rem no-repeat url('/img/page/arrow.svg'), #E8BB46
+      // width: 1.9rem
+      width: 8.8rem
+      position: absolute
+      top: 0
+      left: calc(7vw - 8.6rem)
+      height: 18.8rem
+
+      @media #{$media-md-up}
+        // left: -11.8rem
+        // width: 8.8rem
+
+  &__content
+    flex-direction: column
+    padding: 4rem
+    display: flex
+
+    @media #{$media-md-up}
+      flex-direction: row
+      padding: 12rem 3rem 10rem 10vw
+
+  &__name
+    font-weight: 900
+    font-size: 4rem
+    line-height: .9em
+    text-transform: uppercase
+    color: $color_primary
+    background: #fff
+
+  &__col
+    &:nth-child(1)
+
+      @media #{$media-md-up}
+        flex-basis: 24vw
+
+    &:nth-child(2)
+      flex-basis: 58vw
+
+    &_terms
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+
+  &__text
+    font-size: 1.6rem
+
+    &_one
+      margin-top: 0
+
+  &__need
+    background: url('/img/page/about-bg.jpg') no-repeat center center / cover
+
+  &-terms
+    &__block
+      height: 11rem
+
+      @media #{$media-md-up}
+        height: 18.8rem
+
+    &__big-title
+      font-family: $font-family_accent
+      font-weight: 900
+      font-size: 3.4rem
+      line-height: .9em
+      text-transform: uppercase
+      color: $color_primary
+      margin-top: 5rem
+      margin-bottom: 3rem
+
+    &__title
+      font-weight: 900
+      font-size: 2rem
+      line-height: 1em
+      text-transform: uppercase
+      color: $color_primary
+      font-family: $font-family_accent
+      margin-bottom: 5rem
+
+    &-list
+      margin-bottom: 5rem
+
+      &__item
+        font-size: 1.6rem
+        line-height: 1.5em
+        color: $color_main
+        background: url(/img/icons/list-arrow.svg) no-repeat left 7px
+
+        @media #{$media-md-up}
+          margin-bottom: 1.3rem
+
+    &__text
+      font-size: 1.6rem
+      line-height: 1.5em
+      color: $color_main
+
+  &__bold
+    font-weight: bold
+    color: $color_primary_light
+
+.mb-5
+  margin-bottom: 5rem

@@ -1,0 +1,28 @@
+.need
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  padding: 10rem 10vw
+  background: $color_accent
+  padding: 5.7rem 13.3vw 2.5rem
+
+  @media #{$media-md-up}
+    display: none
+
+  &__title
+    margin: 0
+
+  &__subtitle
+    margin: 3rem 0
+
+  &__btn
+    margin-bottom: 2.5rem
+
+.need__desktop
+  .need
+    display: none
+
+    @media #{$media-md-up}
+      display: flex
+      padding: 6.8rem 4.5rem 1.5rem
+      margin-bottom: 3rem

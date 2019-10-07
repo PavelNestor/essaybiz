@@ -1,0 +1,118 @@
+.recent
+  display: flex
+  flex-direction: column
+
+  @media #{$media-md-up}
+    flex-direction: row
+
+  &__accent-line
+    content: ''
+    height: 13rem
+    width: 2px
+    bottom: -4.3rem
+    background: $color_accent
+    right: 0
+    position: absolute
+    top: 0
+    left: 10vw
+
+    @media #{$media-md-up}
+      height: 21rem
+      bottom: -5rem
+      left: calc(10vw - 2.8rem)
+
+  &__accent-block
+    width: 1.9rem
+    height: 8.7rem
+    background: $color_accent
+    position: absolute
+    left: 2rem
+    top: -1px
+    pointer-events: none
+    z-index: 0
+
+    @media #{$media-md-up}
+      left: 3rem
+      top: -1px
+      width: 8.8rem
+      height: 16rem
+
+    &_sm
+      content: ''
+      height: 13rem
+      width: 2px
+      bottom: -4.3rem
+      background: $color_accent
+      right: 0
+      position: absolute
+      top: 0
+      left: 3.8rem
+
+      @media #{$media-md-up}
+        height: 21rem
+        bottom: -5rem
+        left: 11.7rem
+
+      &_last
+        left: 3.7rem
+
+        @media #{$media-md-up}
+          left: 8.7rem
+
+    &:after
+      content: ''
+      height: 5rem
+      width: 2px
+      bottom: -4.3rem
+      background: $color_accent
+      right: 0
+      position: absolute
+
+      @media #{$media-md-up}
+        bottom: -5rem
+
+    &_last
+      left: 2rem
+
+      @media #{$media-md-up}
+        left: 0
+
+  &__title
+    margin: 5rem 0 4rem 2.8rem
+    line-height: 1em
+
+    @media #{$media-md-up}
+      margin: 12rem 0 5rem 11.8rem
+
+    &_two
+      @media #{$media-md-up}
+        margin: 12rem 0 5rem 13.1rem
+
+    &_three
+      @media #{$media-md-up}
+        margin: 12rem 0 5rem 13.1rem
+
+  &__col
+    position: relative
+    padding: 0 2rem 0
+
+    &_one
+      background: $color_light
+
+      @media #{$media-md-up}
+        flex-basis: 32.6%
+        padding: 0 0 0 3rem
+
+    &_two
+      background: $color_bg
+
+      @media #{$media-md-up}
+        flex-basis: 34.75%
+        padding: 0 3rem 0 3rem
+
+    &_three
+      background: $color_light
+
+      @media #{$media-md-up}
+        flex-basis: 32.6%
+        padding: 0 3rem 0 0

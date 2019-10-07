@@ -1,0 +1,157 @@
+.share
+  background: $color_bg
+  display: flex
+  padding: 5rem 2rem
+  flex-direction: column-reverse
+
+  @media #{$media-md-up}
+    flex-direction: row
+    padding: 12rem 7.5rem 12rem 10vw
+
+  &__title
+    font-size: 4rem
+
+  &__text
+    font-size: 1.6rem
+    line-height: 1.3em
+    margin-bottom: 3rem
+    color: $color_primary
+
+    &_terms
+      font-size: 1.2rem
+
+      &-link
+        text-decoration: underline
+
+  &__col
+    &:nth-child(1)
+      flex-basis: auto
+      padding-right: 0
+
+      @media #{$media-md-up}
+        flex-basis: 69vw
+        padding-right: 10vw
+
+    &:nth-child(2)
+      flex-basis: auto
+      padding-left: 3rem
+
+      @media #{$media-md-up}
+        flex-basis: 34vw
+        padding-left: 4.8rem
+
+.checker
+  &__form
+    height: 100%
+    background: $color_bg
+
+    &-wrap
+      margin-bottom: 5rem
+
+    &-input
+      width: 100%
+      line-height: 2em
+      font-size: 1.4rem
+      border: none
+      box-shadow: none
+      border-radius: 0
+      margin-bottom: 2rem
+      padding: .6rem
+
+      @media #{$media-md-up}
+        border-radius: 5px
+
+      &::placeholder
+          font-size: 1.4rem
+          text-align: center
+
+      &_upload
+        background: #fff
+        border-radius: 0
+        border: 1px dashed $color_main
+        height: 9rem
+        text-align: center
+        margin-bottom: 1.5rem
+
+        @media #{$media-md-up}
+          border-radius: 5px
+
+        &::placeholder
+          font-size: 1.4rem
+          text-align: center
+
+
+      &_textarea
+        resize: none
+        height: 12rem
+        margin-bottom: 1.7rem
+
+        &::placeholder
+          padding: 4.8rem
+          font-size: 1.4rem
+          text-align: center
+
+  &__content
+    padding-bottom: 25.6rem
+    padding-right: 7vw
+
+    @media #{$media-md-up}
+      padding-bottom: 24.4rem
+      padding-right: 32vw
+
+  &__video-wrap
+    position: absolute
+    top: -21rem
+    left: 7vw
+    right: 2rem
+
+    @media #{$media-md-up}
+      left: 20.5vw
+      right: 19.3vw
+
+  &__faq
+    background: $color_main
+    padding: 35rem 2rem 9rem 7vw
+    position: relative
+
+    @media #{$media-xxs-up}
+      padding: 25rem 2rem 9rem 7vw
+
+    @media #{$media-sm-up}
+      padding: 20rem 2rem 9rem 7vw
+
+    @media #{$media-md-up}
+      padding: 28.2rem 7.4vw 9rem 11vw
+
+    &-item
+      padding: 1.3rem 3.8rem
+
+.fs-upload-target
+  font-weight: bold
+  color: $color_primary
+  padding-top: 1.1rem
+  z-index: -1
+
+  &:before
+    content: 'Or upload your file: .pdf, .docx, .txt.'
+    display: block
+    font-weight: bold
+    margin-bottom: -2px
+    font-size: 1.4rem
+    color: $color_primary
+
+.fs-upload
+  position: relative
+  margin-bottom: 2.4rem
+
+.fs-upload-input
+  opacity: 0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 1
+  font-size: 1.4rem
+  color: $color_primary

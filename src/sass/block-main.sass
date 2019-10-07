@@ -1,29 +1,89 @@
 .main
   display: flex
   flex-direction: column
+  position: relative
 
   @media #{$media-md-up}
     flex-direction: row
 
+  &__left-wrap
+    border: 0
+    height: 100%
+    padding: 0
+
+    @media #{$media-md-up}
+      border: 1px solid white
+      border-right: 0
+      padding: 8.9rem 10vw 9rem calc(10vw - 3rem)
+
+  &__right-wrap
+    height: 100%
+    border: 0
+    padding: 0
+
+    @media #{$media-md-up}
+      border: 1px solid white
+      border-left: 0
+      padding: 10.1rem calc(10vw - 6rem) 9rem 6rem
+
+  &__wrap
+    border: 1px solid #fff
+    position: absolute
+    top: 27.7vh
+    bottom: 9vh
+    left: 2vw
+    right: 2vw
+    display: flex
+    flex-direction: column
+
+    @media #{$media-md-up}
+      flex-direction: row
+
+  &__wrap-col
+    &:nth-child(1)
+      flex-basis: 67.4%
+      padding: 7rem 13.3vw 4rem
+
+      // @media #{$media-md-up}
+      //   padding: 10rem 10vw 10rem 7vw
+      @media #{$media-lg-up}
+        padding: 8.5rem 9.5vw 8.5rem 8vw
+
+    &:nth-child(2)
+      flex-basis: 32.5%
+      padding: 5.7rem 13.3vw 2.5rem
+
+      // @media #{$media-md-up}
+      //   padding: 10rem 5vw 10rem 4.6vw
+      @media #{$media-lg-up}
+        padding: 9.9rem 0 0 4.9vw
+
   &__slogan
-    margin-top: 4.1rem !important
     margin-bottom: 3rem
 
     @media #{$media-md-up}
-      margin-bottom: 4.5rem
-      margin-top: 9.9rem !important
+      margin-bottom: 4.7rem
 
   &__right
     &_title
       margin: 0
     &_subtitle
       margin: 3rem 0
+      font-size: 1.97rem
 
     &_btn
       margin-bottom: 2.5rem
 
   &__list
-    margin-top: 3rem
+    margin-top: 3.2rem
+
+    &-item
+      margin: 0 0 1rem 0
+      font-size: 1.6rem
+
+      @media #{$media-md-up}
+        margin: 0 0 1.1rem 0
+        font-size: 1.41rem
 
   &__col
     min-height: auto
@@ -37,21 +97,38 @@
       min-height: 100vh
 
     &:nth-child(1)
-      background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/block-main/block-main.jpg")
-      flex-basis: 67%
-      padding: 7rem 13.3vw 4rem
+      background: center left/cover no-repeat url("/img/block-main/block-main-bg.jpg")
+      // background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/block-main/block-main.jpg")
+      flex-basis: 67.4%
+      padding: 11rem 13vw 4rem 13vw
 
       @media #{$media-md-up}
-        padding: 10rem 10vw 10rem 7vw
-      @media #{$media-lg-up}
-        padding: 10rem 10vw
+        padding: 17% 0 14.9rem 3rem
 
     &:nth-child(2)
       background: $color_accent
-      flex-basis: 33%
-      padding: 5.7rem 13.3vw 2.5rem
+      flex-basis: 32.5%
+      padding: 5.8rem 12.7vw 2.6rem
 
       @media #{$media-md-up}
-        padding: 10rem 5vw 10rem 4.6vw
-      @media #{$media-lg-up}
-        padding: 10rem 9.4vw 10rem 4.6vw
+        padding: 17% 3rem 14.9rem 0
+
+  &__scroll-down
+    width: 2.1rem
+    height: 2.6rem
+
+
+  &__arrow-block
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 4rem
+    width: 3rem
+    background: $color_accent
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @media #{$media-md-up}
+      height: 14.9rem
+

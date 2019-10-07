@@ -1,0 +1,50 @@
+.latest
+  &__img-wrap
+    height: 29rem
+    margin-bottom: 3rem
+
+    @media #{$media-md-up}
+      height: 51rem
+
+  &__mobile
+    display: block
+
+    @media #{$media-md-up}
+      display: none
+
+  &__desktop
+    display: none
+
+    @media #{$media-md-up}
+      display: block
+
+  &__accent-block
+    @media #{$media-md-up}
+      height: 3.6rem
+      top: 12rem
+
+      &_sm
+        top: 12rem
+        height: 9rem
+
+  &__col
+    &_one
+      padding-bottom: 3rem
+
+    &_two
+      display: none
+
+      @media #{$media-md-up}
+        background: $color_light
+        padding-top: 21rem
+        margin-left: -1px
+        padding-bottom: 3rem
+        display: block
+
+    &_three
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        padding-bottom: 3rem
+        padding-top: 21rem

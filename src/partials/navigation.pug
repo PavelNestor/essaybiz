@@ -1,14 +1,15 @@
-nav.navbar
+nav#navbar.navbar
   .navbar__col
-    img(src='/img/logo.svg', alt='EssayBiz')
+    a.navbar__link(href='/')
+      img(src='/img/logo.svg', alt='EssayBiz')
 
     ul.menu.menu__left
       li.menu__item.menu__item
-        a.menu__link.menu__link_white(href="#") Essays
+        a.menu__link.menu__link_white(href="index.html#essay") Essays
       li.menu__item.menu__item_white
-        a.menu__link.menu__link_white(href="#") Helpful tips & tricks for writing
+        a.menu__link.menu__link_white(href="index.html#tips") Helpful tips & tricks for writing
       li.menu__item.menu__item_white
-        a.menu__link.menu__link_white(href="#") Share Your Essay
+        a.menu__link.menu__link_white(href="index.html#share") Share Your Essay
 
   .navbar__col
     ul.menu.menu__right
@@ -22,7 +23,9 @@ nav.navbar
         a.menu__link(href="#") order now
 
   .navbar__mobile
-    img(src='/img/icons/menu.svg', alt='Open menu')
-    img(src='/img/logo.svg', alt='EssayBiz')
-    img(src='/img/icons/login.svg', alt='Log in')
-
+    a#menu-open.menu-mobile__img-wrap.navbar__mobile-wrap
+      img.navbar__mobile-burger(src='/img/icons/menu.svg', alt='Open menu')
+    a.menu-mobile__img-wrap.navbar__mobile-wrap(href='/')
+      img.navbar__mobile-logo(src='/img/logo.svg', alt='EssayBiz')
+    a#login-open.menu-mobile__img-wrap.navbar__mobile-wrap
+      img.navbar__mobile-login(src='/img/icons/login.svg', alt='Log in')

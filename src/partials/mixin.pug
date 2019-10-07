@@ -9,3 +9,39 @@ mixin picturePng(path, alt='')
     source.cover(srcset=`${path}.webp` type="image/webp" alt= alt class!=attributes.class)
     source.cover(srcset=`${path}.png` type="image/jpeg" alt= alt class!=attributes.class)
     img.cover(srcset=`${path}.png` alt= alt class!=attributes.class)
+
+mixin essay(essay)
+  .essay
+    a.essay__title(class!=attributes.class)&attributes(attributes)= essay.title
+    p.essay__text= essay.text
+    +essayDetails(essay.words, essay.date, essay.pages)
+
+mixin essayDetails(words, date, pages)
+  .essay__details
+    .essay__detail-block.essay__words-block
+      p.essay__detail-text= words
+    .essay__detail-block.essay__date-block
+      p.essay__detail-text.essay__detail-slash /
+      p.essay__detail-text= date
+    .essay__detail-block.essay__pages-block
+      p.essay__detail-text.essay__detail-slash /
+      p.essay__detail-text= pages
+
+mixin topicsItemTips(options)
+  .hot__topics-item(class!=attributes.class)
+    a.tab__topics-links(href='essay-page.html')
+      .hot__topics-text= options
+
+mixin topicsItem(options)
+  .hot__topics-item(class!=attributes.class)
+    .hot__topics-text= options.topics
+
+mixin topicsFreeItem(options)
+  .hot__topics-item(class!=attributes.class)
+    .hot__topics-text= options.free
+
+mixin tipsCard(options)
+  .tips__card
+    h4.tips__card-title= options.title
+    p.tips__card-text= options.text
+      a(href='#').tips__card-more Read more
