@@ -2,32 +2,48 @@
   &__header
     height: 8rem
     display: flex
+    background: #66938D
 
     @media #{$media-md-up}
       height: 20rem
+      background: none
 
     &-col
       height: 100%
 
       &:nth-child(1)
-        background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/page/header.jpg")
-        flex-basis: 75%
+        background: none
 
         @media #{$media-md-up}
-          flex-basis: 66%
+          background: linear-gradient(90deg, rgba(102,147,141,0.8) 0%, rgba(102,147,141,0.8) 100%),center left/cover no-repeat url("/img/page/header.jpg")
+          flex-basis: 67.4%
 
       &:nth-child(2)
-        background: $color_accent
-        flex-basis: 25%
+        background: none
 
         @media #{$media-md-up}
-          flex-basis: 34%
+          background: $color_accent
+          flex-basis: 32.6%
 
-  &__social-wrap
-    display: flex
+  &__social
+    &-wrap
+      display: flex
+      margin-bottom: 1rem
 
-    @media #{$media-md-up}
-      display: block
+      @media #{$media-md-up}
+        display: block
+
+    &-item
+      display: flex
+      align-items: center
+
+    &-text
+      font-family: $font-family_montserrat, sans-serif
+      font-weight: bold
+      font-size: 1.4rem
+      line-height: 1em
+      color: $color_primary
+      margin: 0 0.5rem
 
   &__wrap
     position: relative
@@ -90,6 +106,8 @@
         display: block
 
   &__text
+    font-size: 1.6rem
+
     &_one
       margin-top: 0
 
@@ -128,7 +146,8 @@
       &__item
         font-size: 1.6rem
         line-height: 1.5em
-        color: #4F4F4F
+        color: $color_main
+        background: url(/img/icons/list-arrow.svg) no-repeat left 7px
 
         @media #{$media-md-up}
           margin-bottom: 1.3rem
@@ -137,3 +156,10 @@
       font-size: 1.6rem
       line-height: 1.5em
       color: $color_main
+
+  &__bold
+    font-weight: bold
+    color: $color_primary_light
+
+.mb-5
+  margin-bottom: 5rem

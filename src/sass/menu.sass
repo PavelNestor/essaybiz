@@ -6,13 +6,14 @@
   left: 0
   right: -17px
   bottom: 0
-  padding: 2.5rem 0
+  padding: 2.5rem 0 10rem
   z-index: 999
   overflow-x: scroll
   transition: .4s
 
   &_active
     transform: translateY(0)
+    bottom: -8rem
 
   &__search
     width: 100%
@@ -22,7 +23,6 @@
     padding-left: 0
     cursor: pointer
     height: auto
-    margin-right: 2rem
 
   &__header
     display: flex
@@ -41,6 +41,7 @@
     height: auto
     margin-bottom: 2rem
     text-transform: uppercase
+    padding: 0
 
   &__title
     font-weight: 900

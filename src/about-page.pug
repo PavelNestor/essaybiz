@@ -6,7 +6,7 @@ block vars
 block content
   include partials/menu
   include partials/login
-  include partials/navigation
+  //- include partials/navigation
 
   include partials/page-header
 
@@ -20,12 +20,18 @@ block content
           | Essay.biz
 
         .page__social-wrap
-          a.social-btn.social-btn_fb(href="#")
-            img(src='/img/icons/fb.svg', alt="Facebook")
-          a.social-btn.social-btn_twitter(href="#")
-            img(src='/img/icons/twitter.svg', alt="Facebook")
-          a.social-btn.social-btn_telegram(href="#")
-            img(src='/img/icons/telegram.svg', alt="Facebook")
+          .page__social-item
+            a.social-btn.social-btn_fb(href="#")
+              img(src='/img/icons/fb.svg', alt="Facebook")
+            p.page__social-text 25
+          .page__social-item
+            a.social-btn.social-btn_twitter(href="#")
+              img(src='/img/icons/twitter.svg', alt="Facebook")
+            p.page__social-text 54
+          .page__social-item
+            a.social-btn.social-btn_telegram(href="#")
+              img(src='/img/icons/telegram.svg', alt="Facebook")
+            p.page__social-text 36
 
       .page__col
         p.page__text.page__text_one Like any other well-known success of individuals or groups determined by the number of followers, and our success is determined by the number of satisfied students. More than 90% of work annually receive an “excellent”. We have something to be proud of! We do not have to be difficult honors with a team of professionals, but it is difficult to compete on this market.
@@ -50,20 +56,20 @@ block content
         h2 How to avoid fraud?
         h4 What can you do about it:
 
-        ul.list
-          li.list__item Trust to one company.
-          li.list__item Possible to ask all that you are interested in managers.
-          li.list__item Be assertive.
-          li.list__item Advance search for information on this or that company.
-          li.list__item Read reviews of other customers.
-          li.list__item Try to check the authenticity of these reviews.
+        ul.list.page-terms-list
+          li.list__item.page-terms-list__item Trust to one company.
+          li.list__item.page-terms-list__item Possible to ask all that you are interested in managers.
+          li.list__item.page-terms-list__item Be assertive.
+          li.list__item.page-terms-list__item Advance search for information on this or that company.
+          li.list__item.page-terms-list__item Read reviews of other customers.
+          li.list__item.page-terms-list__item Try to check the authenticity of these reviews.
 
-        p.bold Also, for convenience, use the services of a resource in writing essays and other academic disciplines, you can use the following tips:
+        p.page__text.page__bold.mb-5 Also, for convenience, use the services of a resource in writing essays and other academic disciplines, you can use the following tips:
 
-        ul.list
-          li.list__item Start with small orders. This will reduce the percentage of the lost amount of money if it turns out the resource is not present.
-          li.list__item Pre-ordered work. Before the start of training, you can even learn the curriculum, to not order essays at the last moment before the deadline.
-          li.list__item Typically, the greatest load on the work on writing sites come in the spring or late winter and summer.
+        ul.list.mb-5
+          li.list__item.page-terms-list__item Start with small orders. This will reduce the percentage of the lost amount of money if it turns out the resource is not present.
+          li.list__item.page-terms-list__item Pre-ordered work. Before the start of training, you can even learn the curriculum, to not order essays at the last moment before the deadline.
+          li.list__item.page-terms-list__item Typically, the greatest load on the work on writing sites come in the spring or late winter and summer.
           
         p.page__text Quality of work, honest, responsible and careful attitude to each client, reasonable prices and flexible system of discounts – this is what allows us to develop dynamically, to attract more new customers and conquer the hearts of regular customers.
         p.page__text We hope that each reader will be able to read and understand the work that he orders. Yes, our work can influence the reader. Every professional writer can explain any difficult concept, but we should not be serious. Sometimes some rotten essay is a broad topic.

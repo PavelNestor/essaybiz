@@ -15,8 +15,10 @@ footer.footer
         ul.footer-list
           li.footer-list__item
             a.footer-list__link(href='about-page.html') About
-          li.footer-list__item Contact us
-          li.footer-list__item FAQ
+          li.footer-list__item
+            a.footer-list__link(href='index.html#contact') Contact us
+          li.footer-list__item
+            a.footer-list__link(href='#') FAQ
 
       .footer-contact__col
         h3.footer-contact__title Contact us
@@ -40,9 +42,12 @@ footer.footer
               | @essay.biz
 
     .footer__small_wrap
-      small.footer__small.white Terms & Conditions
-      small.footer__small.white Privacy Policy
-      small.footer__small.white DMCA
+      small
+        a.footer__small.white(href='terms-page.html') Terms & Conditions
+      small
+        a.footer__small.white(href='#') Privacy Policy
+      small
+        a.footer__small.white(href='#') DMCA
 
   #questions.main__col.footer__col
     h2.main__right_title.footer-right__title
